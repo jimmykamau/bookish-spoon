@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bookish"
+version = "0.1.0"
+description = "Python backend for chat app"
+authors = ["jimmykamau <jimmykambiz@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.92.0"}
+alembic = "^1.9.4"
+python-dotenv = "^0.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

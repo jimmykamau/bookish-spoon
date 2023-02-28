@@ -1,0 +1,43 @@
+services:
+  db:
+    restart: unless-stopped
+    image: postgres:alpine
+    ports: 
+      - 5432:5432
+    volumes: 
+      - pgdata:/var/lib/postgresql/data
+    networks: 
+      - backend
+    environment: 
+      - POSTGRES_USER=bookish
+      - POSTGRES_PASSWORD=bookish
+
+  api:
+    restart: unless-stopped
+    build: 
+      context: ./api
+      dockerfile: ./dockerfile
+    ports:
+      - 80:80
+    networks: 
+      - backend
+    volumes:
+      - ./api/app:/app/app
+      - ./api/alembic:/app/alembic
+    depends_on: 
+      - db
+  
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025" # smtp server
+      - "8025:8025" # web ui. Visit http://localhost:8025/ to check emails
+    restart: unless-stopped
+    networks:
+      - backend
+
+volumes: 
+  pgdata:
+
+networks: 
+  backend:
