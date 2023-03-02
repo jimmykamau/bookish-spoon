@@ -239,8 +239,8 @@ class LeftDrawer extends StatelessWidget {
                           context,
                           rootNavigator: true,
                         ).pushNamedAndRemoveUntil(
-                          Routes.CHOOSE_USER,
-                          ModalRoute.withName(Routes.CHOOSE_USER),
+                          Routes.LOGIN_PAGE,
+                          ModalRoute.withName(Routes.LOGIN_PAGE),
                         );
                       },
                       leading: StreamSvgIcon.user(

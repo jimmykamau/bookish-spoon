@@ -193,13 +193,15 @@ class _MyAppState extends State<MyApp>
                 return [
                   AppRoutes.generateRoute(
                     RouteSettings(
-                      name: Routes.CHOOSE_USER,
+                      // name: Routes.CHOOSE_USER,
+                      name: Routes.LOGIN_PAGE,
                     ),
                   )!
                 ];
               },
               initialRoute: _initData!.client.state.currentUser == null
-                  ? Routes.CHOOSE_USER
+                  // ? Routes.CHOOSE_USER
+                  ? Routes.LOGIN_PAGE
                   : Routes.HOME,
             ),
           ),

@@ -14,6 +14,7 @@ class AppLocalizations {
       'chat_api_key': 'Chat API Key',
       'chats': 'Chats',
       'choose_a_group_chat_name': 'Choose a group chat name',
+      'confirm_account': 'Confirm account',
       'connected': 'Connected',
       'create_a_group': 'Create a Group',
       'custom_settings': 'Custom settings',
@@ -22,6 +23,7 @@ class AppLocalizations {
           'Are you sure you want to delete this conversation?',
       'delete_conversation_title': 'Delete Conversation',
       'disconnected': 'Disconnected',
+      'email_address': 'Email address',
       'error_connecting': 'Error connecting, retry',
       'files': 'Files',
       'files_appear_here': 'Files sent in this chat will appear here',
@@ -66,6 +68,7 @@ class AppLocalizations {
       'operation_could_not_be_completed':
           'The operation couldn\'t be completed.',
       'owner': 'Owner',
+      'password': 'Password',
       'photos_and_videos': 'Photos & Videos',
       'photos_or_videos_will_appear_here':
           'Photos or videos sent in this chat will \nappear here',
@@ -81,6 +84,7 @@ class AppLocalizations {
       'select_user_to_try_flutter_sdk': 'Select a user to try the Flutter SDK',
       'shared_groups': 'Shared Groups',
       'sign_out': 'Sign out',
+      'sign_up': 'Sign up',
       'something_went_wrong_error_message': 'Something went wrong',
       'stream_sdk': 'Stream SDK',
       'stream_test_account': 'Stream test account',
@@ -88,6 +92,7 @@ class AppLocalizations {
       'type_a_name_hint': 'Type a name',
       'user_id': 'User ID',
       'user_id_error': 'Please enter the User ID',
+      'username': 'Username',
       'username_optional': 'Username (optional)',
       'user_token': 'User Token',
       'user_token_error': 'Please enter the user token',
@@ -232,6 +237,10 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['choose_a_group_chat_name']!;
   }
 
+  String get confirmAccount {
+    return _localizedValues[locale.languageCode]!['confirm_account']!;
+  }
+
   String get connected {
     return _localizedValues[locale.languageCode]!['connected']!;
   }
@@ -259,6 +268,10 @@ class AppLocalizations {
 
   String get disconnected {
     return _localizedValues[locale.languageCode]!['disconnected']!;
+  }
+
+  String get emailAddress {
+    return _localizedValues[locale.languageCode]!['email_address']!;
   }
 
   String get errorConnecting {
@@ -430,6 +443,10 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['owner']!;
   }
 
+  String get password {
+    return _localizedValues[locale.languageCode]!['password']!;
+  }
+
   String get photosAndVideos {
     return _localizedValues[locale.languageCode]!['photos_and_videos']!;
   }
@@ -481,6 +498,10 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['shared_groups']!;
   }
 
+  String get signUp {
+    return _localizedValues[locale.languageCode]!['sign_up']!;
+  }
+
   String get signOut {
     return _localizedValues[locale.languageCode]!['sign_out']!;
   }
@@ -512,6 +533,10 @@ class AppLocalizations {
 
   String get userIdError {
     return _localizedValues[locale.languageCode]!['user_id_error']!;
+  }
+
+  String get username {
+    return _localizedValues[locale.languageCode]!['username']!;
   }
 
   String get usernameOptional {
