@@ -1,5 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:example/channel_list_page.dart';
+import 'package:example/confirm_account_page.dart';
+import 'package:example/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 
@@ -14,6 +16,7 @@ import '../main.dart';
 import '../new_chat_screen.dart';
 import '../new_group_chat_screen.dart';
 import '../thread_page.dart';
+import '../login_page.dart';
 import 'routes.dart';
 
 class AppRoutes {
@@ -126,6 +129,24 @@ class AppRoutes {
                 RouteSettings(arguments: args, name: Routes.CHANNEL_LIST_PAGE),
             builder: (context) {
               return ChannelListPage();
+            });
+      case Routes.LOGIN_PAGE:
+        return MaterialPageRoute(
+            settings: RouteSettings(arguments: args, name: Routes.LOGIN_PAGE),
+            builder: (context) {
+              return LoginPage();
+            });
+      case Routes.SIGNUP_PAGE:
+        return MaterialPageRoute(
+            settings: RouteSettings(arguments: args, name: Routes.SIGNUP_PAGE),
+            builder: (context) {
+              return SignupPage();
+            });
+      case Routes.CONFIRM_ACCOUNT_PAGE:
+        return MaterialPageRoute(
+            settings: RouteSettings(arguments: args, name: Routes.CONFIRM_ACCOUNT_PAGE),
+            builder: (context) {
+              return ConfirmAccountPage();
             });
       // Default case, should not reach here.
       default:
