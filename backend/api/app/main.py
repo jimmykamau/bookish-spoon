@@ -26,13 +26,18 @@ stream_chat_client = stream_chat.StreamChat(
 
 
 @app.post("/signup", status_code=201)
-async def signup(user_details: CreateUser):
-    cognito.username = user_details.username
-    cognito.set_base_attributes(email=user_details.email)
-    response = cognito.register(
-        username=user_details.username, password=user_details.password
-    )
-    return response
+async def signup(user_details: CreateUser, response: Response):
+    try:
+        cognito.username = user_details.username
+        cognito.set_base_attributes(email=user_details.email)
+        response = cognito.register(
+            username=user_details.username, password=user_details.password
+        )
+        return response
+    except Exception as e:
+        response.status_code = 400
+        print(response)
+        return e.response.get("message")
 
 
 @app.post("/signup/confirm")
